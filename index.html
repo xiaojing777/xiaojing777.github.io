@@ -1,18 +1,133 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xiaojing Sun</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;margin:0;color:#111}
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
+    header{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+    h1{margin:0;font-size:34px;letter-spacing:-0.3px}
+    .sub{color:#444;margin-top:6px}
+    nav a{margin-right:14px;text-decoration:none;color:#0b57d0}
+    nav{margin-top:10px}
+    section{margin-top:26px;padding:18px 18px;border:1px solid #e6e6e6;border-radius:16px}
+    h2{margin:0 0 10px 0;font-size:18px}
+    ul{margin:6px 0 0 18px}
+    li{margin:6px 0}
+    .pill{display:inline-block;padding:4px 10px;border:1px solid #ddd;border-radius:999px;margin:6px 8px 0 0;color:#333;font-size:13px}
+    .meta{color:#555}
+    .row{display:flex;gap:18px;flex-wrap:wrap}
+    .col{flex:1;min-width:280px}
+    footer{margin-top:28px;color:#777;font-size:13px}
+  </style>
 </head>
 <body>
-  <h1>Xiaojing Sun</h1>
-  <p>Ph.D. Candidate in Statistics, Purdue University</p>
-  <p>Email: <a href="mailto:sun1131@purdue.edu">sun1131@purdue.edu</a></p>
-  <p>
-    <a href="cv.pdf">CV</a> |
-    <a href="https://scholar.google.com/">Google Scholar</a> |
-    <a href="https://github.com/xiaojing777">GitHub</a>
-  </p>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Xiaojing Sun</h1>
+        <div class="sub">Ph.D. Candidate in Statistics, Purdue University (Expected 2027)</div>
+        <div class="sub meta">West Lafayette, IN · <a href="mailto:sun1131@purdue.edu">sun1131@purdue.edu</a></div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#awards">Awards</a>
+          <a href="#talks">Talks</a>
+          <a href="#cv">CV</a>
+        </nav>
+      </div>
+      <div>
+        <!-- TODO: Replace # with your real links -->
+        <div class="pill"><a href="https://github.com/xiaojing777">GitHub</a></div>
+        <div class="pill"><a href="#">Google Scholar</a></div>
+        <div class="pill"><a href="#">LinkedIn</a></div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="meta">
+        I am a fourth-year Ph.D. candidate in Statistics. My research develops and applies statistical, machine learning,
+        and deep learning methods for wearable device data, personalized mobile health monitoring, flexible copula modeling,
+        treatment effect heterogeneity, and accelerated insurance underwriting.
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="pill">Wearables & Mobile Health</div>
+          <div class="pill">Heterogeneous / Personalized Modeling</div>
+          <div class="pill">Survival & Longitudinal Analysis</div>
+        </div>
+        <div class="col">
+          <div class="pill">Copulas & Tail Dependence</div>
+          <div class="pill">Representation Learning</div>
+          <div class="pill">Responsible / Fair Decision Systems</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Heterogeneous functional models for individualized effects and subgroup discovery on large-scale wearable data.</li>
+        <li>Evaluation and responsible deployment of risk models in high-stakes settings (e.g., accelerated underwriting).</li>
+        <li>Flexible non-exchangeable copulas capturing full-range tail dependence and asymmetry.</li>
+        <li>Representation learning pipelines for accelerometer data, including LLM-inspired approaches and interpretability probes.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Working Papers / Research Projects</h2>
+      <ul>
+        <li><strong>Generalized Heterogeneous Functional Model (GHFM)</strong> (2024) — personalized functional effects + subgroup identification; applied to UK Biobank; under review (arXiv: 2501.01135).</li>
+        <li><strong>Flexible Non-exchangeable Bivariate Copulas</strong> (2025) — Pareto mixture construction; mono-vine structure; angular tail dependence; ready for journal submission.</li>
+        <li><strong>Representation Learning for Wearable Accelerometer Data with LLMs</strong> (ongoing) — person-level embeddings; evaluation across downstream statistical tasks; time-masking interpretability experiments.</li>
+        <li><strong>Heterogeneous Additive Functional Cox Models for Accelerated Underwriting</strong> (ongoing) — tensor-product B-splines; fusion + smoothness penalties; ADMM optimization; NHANES application.</li>
+        <li><strong>Federated Data Augmentation via Inter-client Knowledge Transfer</strong> (ongoing) — privacy-preserving modality synthesis to improve inference accuracy on UK Biobank / All of Us / NHANES.</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Biostatistician Intern, Novartis</strong> (Jun–Aug 2025) — Extended Conditional Inference Tree framework for mixed-type multiple endpoints; provided theoretical justification and simulation evidence for FWER-controlled joint testing; applied to psoriasis trial data.</li>
+        <li><strong>Teaching & Research Assistant, Purdue Statistics</strong> (Aug 2022–Present) — TA for statistical methods and actuarial/math courses.</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <ul>
+        <li>ICSA Jiann-Ping Hsu Pharmaceutical and Regulatory Sciences Student Paper Award (2025)</li>
+        <li>George Casella Award, Purdue University (2025)</li>
+        <li>Honorable Mention, JSM Student Paper Award Competition (2024)</li>
+        <li>National Scholarship (China Ministry of Education) (2020)</li>
+        <li>Finalist Prize (Global Top 0.1%), MCM/ICM (2020)</li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <ul>
+        <li>JSM 2024 (Portland) — Contributed Talk</li>
+        <li>ICSA 2025 (Storrs) — Invited Talk</li>
+        <li>Novartis Science VC (East Hanover) — Internal Seminar (Aug 2025)</li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p><a href="cv.pdf">Download CV (PDF)</a></p>
+      <p class="meta">Next step: upload your resume PDF into this repository and name it <strong>cv.pdf</strong>.</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Xiaojing Sun · Hosted on GitHub Pages
+    </footer>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
