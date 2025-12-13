@@ -11,7 +11,7 @@
     body{margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg); line-height:1.55;}
     a{color:var(--link); text-decoration:none;}
     a:hover{text-decoration:underline;}
-    .wrap{max-width:980px; margin:0 auto; padding:26px 18px 48px;}
+    .wrap{max-width:980px; margin:0 auto; padding:26px 18px 52px;}
     .topnav{display:flex; gap:14px; flex-wrap:wrap; padding:10px 0 18px; border-bottom:1px solid var(--border);}
     .topnav a{font-size:14px;}
     .grid{display:grid; grid-template-columns: 260px 1fr; gap:26px; margin-top:22px;}
@@ -35,26 +35,25 @@
 
 <body>
   <div class="wrap">
-    <!-- Top navigation (similar spirit to the example site) -->
     <div class="topnav">
       <a href="#home">Home</a>
       <a href="#news">News</a>
       <a href="#experience">Experience</a>
       <a href="#awards">Awards</a>
       <a href="#talks">Talks</a>
+      <a href="#teaching">Teaching</a>
       <a href="#research">Research</a>
-      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
 
     <div class="grid" id="home">
-      <!-- Left column -->
+      <!-- Left -->
       <div class="side">
         <img class="photo" src="photo.jpg" alt="Xiaojing Sun" />
 
         <div class="card" style="margin-top:14px;">
           <h1 class="name">Xiaojing Sun</h1>
-          <p class="subtitle">Ph.D. Candidate in Statistics, Purdue University (Expected 2027)</p>
+          <p class="subtitle">Ph.D. Candidate in Statistics, Purdue University</p>
           <p class="subtitle">West Lafayette, IN</p>
 
           <h3>Contact</h3>
@@ -62,9 +61,10 @@
 
           <h3>Links</h3>
           <ul>
+            <li><a href="https://www.linkedin.com/in/sun1131">LinkedIn</a></li>
             <li><a href="https://github.com/xiaojing777">GitHub</a></li>
-            <li><a href="#">Google Scholar</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <!-- Optional: replace with your actual Scholar if you want -->
+            <li><a href="https://scholar.google.com/">Google Scholar</a></li>
           </ul>
 
           <h3>Focus</h3>
@@ -72,31 +72,35 @@
           <div class="tag">Statistical ML / Deep Learning</div>
           <div class="tag">Survival & Longitudinal</div>
           <div class="tag">Copulas & Dependence</div>
-          <div class="tag">Responsible / Fair Decision Systems</div>
+          <div class="tag">Fair / Responsible Decision Systems</div>
 
           <p class="small" style="margin-top:12px;">
-            I build statistical and machine learning methods for real-world decision systems, with a focus on wearable data,
-            personalized health modeling, and fairness in high-stakes applications such as accelerated underwriting.
+            I build statistical and machine learning methods for real-world decision systems, with applications in wearable data,
+            mobile health, and high-stakes modeling.
           </p>
         </div>
       </div>
 
-      <!-- Right column -->
+      <!-- Right -->
       <div>
-        <div class="card sec">
+        <div class="card sec" id="about">
           <h2>About</h2>
           <p class="muted">
-            I am a fourth-year Ph.D. candidate in Statistics. My research develops and applies advanced statistical,
-            machine learning, and deep learning methodologies for wearable device data, personalized mobile health monitoring,
-            flexible copula modeling, treatment effect heterogeneity, and accelerated insurance underwriting.
+            I am a Ph.D. candidate in Statistics at Purdue University, advised by
+            <a href="https://feixue-stat.github.io/">Prof. Fei Xue</a> and
+            <a href="https://www.stat.purdue.edu/~jianxi/">Prof. Jianxi Su</a>.
+            Prior to Purdue, I was fortunate to be advised by
+            <a href="https://faculty.xmu.edu.cn/LJY/en/index.htm">Prof. Jingyuan Liu</a>
+            during my undergraduate study at the School of Economics, Xiamen University.
           </p>
         </div>
 
-        <!-- Put News/Experience/Awards/Talks early, matching your request -->
         <div class="card sec" id="news">
           <h2>News</h2>
           <ul>
+            <li><strong>2025/08</strong> — Successfully completed my internship at Novartis (AMDS).</li>
             <li><strong>2025/06</strong> — ICSA Jiann-Ping Hsu Pharmaceutical and Regulatory Sciences Student Paper Award.</li>
+            <li><strong>2025/05</strong> — Passed the preliminary exam and became an official Ph.D. candidate.</li>
             <li><strong>2025/03</strong> — George Casella Award (Purdue University).</li>
             <li><strong>2024/08</strong> — Honorable Mention in JSM Student Paper Award Competition (ASA).</li>
           </ul>
@@ -108,16 +112,12 @@
             <li>
               <strong>Biostatistician Intern, Novartis</strong> (East Hanover, NJ) — Jun–Aug 2025<br/>
               <span class="muted">
-                Extended Conditional Inference Tree methodology for mixed-type multiple endpoints and demonstrated (theoretically
-                and via simulation) power advantages of FWER-controlled joint testing under cross-endpoint dependence; applied to
-                psoriasis clinical trial data and provided practical guidance for variable selection and TEH analysis.
+                Advanced Methodology &amp; Data Science (AMDS). Mentors: Dr. Yao Chen (SM, AMDS) and Dr. Sophie Sun (AEA, AMDS).
+                Manager: Dr. David Ohlssen (AEA, AMDS).
               </span>
             </li>
             <li>
-              <strong>Teaching & Research Assistant, Purdue Statistics</strong> — Aug 2022–Present<br/>
-              <span class="muted">
-                TA for statistical methods and actuarial/math courses (including graduate-level offerings).
-              </span>
+              <strong>Teaching &amp; Research Assistant, Purdue Statistics</strong> — Aug 2022–Present
             </li>
           </ul>
         </div>
@@ -138,28 +138,41 @@
           <ul>
             <li>JSM 2024 (Portland, OR) — Contributed Talk (08/2024)</li>
             <li>ICSA 2025 (Storrs, CT) — Invited Talk (06/2025)</li>
-            <li>Novartis Science VC (East Hanover, NJ) — Internal Seminar (08/2025)</li>
+            <li>Science VC of Novartis (East Hanover, NJ) — Internal Seminar (08/2025)</li>
           </ul>
         </div>
 
-        <!-- Research later (since publications are currently light) -->
+        <div class="card sec" id="teaching">
+          <h2>Teaching</h2>
+          <ul>
+            <li>STAT 301 — Elementary Statistical Methods</li>
+            <li>STAT 475 — Intermediate Statistical Methodology</li>
+            <li>STAT 525 — Advanced Statistical Methods</li>
+            <li>STAT 526 — Advanced Statistical Methods</li>
+          </ul>
+        </div>
+
         <div class="card sec" id="research">
-          <h2>Research (Selected Projects)</h2>
+          <h2>Research</h2>
+          <h3 style="margin:0 0 6px; font-size:15px;">Preprint</h3>
           <ul>
-            <li><strong>Generalized Heterogeneous Functional Model (GHFM)</strong> — personalized functional effects + subgroup discovery for large-scale mobile health data.</li>
-            <li><strong>Flexible Non-exchangeable Bivariate Copulas</strong> — full-range tail dependence and asymmetric dependence structures.</li>
-            <li><strong>Wearable Representation Learning</strong> — embeddings and evaluation pipelines for high-frequency accelerometer time series.</li>
-            <li><strong>Heterogeneous Additive Functional Cox Models for Accelerated Underwriting</strong> — tensor-product B-splines, fusion/smoothness penalties, scalable optimization.</li>
+            <li>
+              <strong>Generalized Heterogeneous Functional Model with Applications to Large-scale Mobile Health Data</strong><br/>
+              <span class="muted">
+                Xiaojing Sun, Bingxin Zhao, Fei Xue.
+                <a href="https://arxiv.org/abs/2501.01135">arXiv:2501.01135</a>
+              </span>
+            </li>
           </ul>
-          <p class="small">I am happy to share writing samples upon request.</p>
-        </div>
 
-        <div class="card sec" id="education">
-          <h2>Education</h2>
+          <h3 style="margin:14px 0 6px; font-size:15px;">Selected Projects</h3>
           <ul>
-            <li><strong>Ph.D. in Statistics</strong>, Purdue University (08/2022 – 05/2027 expected)</li>
-            <li><strong>B.S. in Statistics</strong>, Xiamen University (09/2018 – 06/2022)</li>
+            <li>Flexible non-exchangeable bivariate copulas for mono-vine structures: full-range tail dependence and asymmetry.</li>
+            <li>Representation learning pipelines for wearable accelerometer data.</li>
+            <li>Heterogeneous additive functional Cox models for accelerated underwriting (wearables + medical exam data).</li>
           </ul>
+
+          <p class="small">I am happy to share additional writing samples upon request.</p>
         </div>
 
         <div class="card sec" id="contact">
@@ -168,9 +181,7 @@
           <p class="small">Last updated: <span id="d"></span></p>
         </div>
 
-        <p class="small" style="margin-top:10px;">
-          Hosted on GitHub Pages.
-        </p>
+        <p class="small" style="margin-top:10px;">Hosted on GitHub Pages.</p>
       </div>
     </div>
   </div>
