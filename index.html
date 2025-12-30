@@ -11,16 +11,19 @@
     --text:#0f172a;
     --muted:#475569;
     --link:#0b57d0;
+    --link-hover:#0a4fb8;
 
     --border: rgba(15, 23, 42, 0.10);
-    --card: rgba(255,255,255,0.86);
+    --border-light: rgba(15, 23, 42, 0.06);
+    --card: rgba(255,255,255,0.92);
     --card-solid: #ffffff;
 
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
-    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.10);
-    --shadow-lg: 0 18px 60px rgba(15, 23, 42, 0.14);
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 20px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 10px 40px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.08);
 
-    --radius: 18px;
+    --radius: 20px;
+    --radius-sm: 12px;
   }
 
   *{ box-sizing:border-box; }
@@ -34,19 +37,25 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* subtle “fancy” background */
+    /* subtle "fancy" background */
     background:
-      radial-gradient(1200px 600px at 20% -10%, rgba(11,87,208,0.12), transparent 60%),
-      radial-gradient(900px 500px at 95% 10%, rgba(99,102,241,0.10), transparent 55%),
-      linear-gradient(180deg, #ffffff 0%, #fbfcff 55%, #ffffff 100%);
+      radial-gradient(1400px 700px at 15% -5%, rgba(11,87,208,0.08), transparent 65%),
+      radial-gradient(1000px 600px at 90% 15%, rgba(99,102,241,0.06), transparent 60%),
+      radial-gradient(800px 500px at 50% 50%, rgba(139,92,246,0.04), transparent 70%),
+      linear-gradient(180deg, #ffffff 0%, #fafbff 50%, #ffffff 100%);
+    background-attachment: fixed;
   }
 
   a{
     color:var(--link);
     text-decoration: none;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
+    transition: color 200ms ease, text-decoration 200ms ease;
   }
-  a:hover{ text-decoration: underline; }
+  a:hover{ 
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
 
   /* accessible focus */
   a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
@@ -67,28 +76,32 @@
     z-index: 50;
 
     display:flex;
-    gap:14px;
+    gap:12px;
     flex-wrap:wrap;
 
-    padding: 12px 0 14px;
-    margin-bottom: 8px;
+    padding: 14px 0 16px;
+    margin-bottom: 12px;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.70);
-    border-bottom: 1px solid var(--border);
-  } /* sticky + top are standard CSS behavior :contentReference[oaicite:3]{index=3} */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255,255,255,0.75);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+  }
 
   .topnav a{
     font-size: 14px;
-    padding: 6px 10px;
+    font-weight: 500;
+    padding: 8px 14px;
     border-radius: 999px;
-    transition: transform 140ms ease, background 140ms ease;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text);
   }
   .topnav a:hover{
-    background: rgba(11,87,208,0.08);
+    background: rgba(11,87,208,0.1);
     transform: translateY(-1px);
     text-decoration: none;
+    color: var(--link);
   }
 
   .grid{
@@ -113,25 +126,33 @@
   }
 
   .card{
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-light);
     border-radius: var(--radius);
-    padding: 16px 16px;
+    padding: 20px 22px;
 
     background: var(--card);
     box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .card:hover{
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
     background: var(--card-solid);
-  } /* box-shadow is the standard way to do card depth :contentReference[oaicite:4]{index=4} */
+    border-color: var(--border);
+  }
 
   .name{
-    font-size: 30px;
+    font-size: 32px;
+    font-weight: 700;
     margin: 0;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, var(--text) 0%, rgba(15,23,42,0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   .subtitle{
     margin: 6px 0 0;
@@ -142,25 +163,27 @@
     width:100%;
     border-radius: var(--radius);
     display:block;
-    background:#f2f2f2;
+    background: linear-gradient(135deg, #f2f2f2 0%, #e8e8e8 100%);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-light);
     box-shadow: var(--shadow-md);
-    transition: transform 180ms ease, box-shadow 180ms ease;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .photo:hover{
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.01);
     box-shadow: var(--shadow-lg);
+    border-color: var(--border);
   }
 
   .side h3{
-    margin: 14px 0 8px;
-    font-size: 13px;
-    letter-spacing: 0.2px;
+    margin: 16px 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: rgba(15,23,42,0.70);
+    color: rgba(15,23,42,0.65);
   }
   .side p, .side li{
     margin: 6px 0;
@@ -173,11 +196,13 @@
   }
 
   h2{
-    font-size: 18px;
-    margin: 0 0 10px;
-    letter-spacing: -0.15px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    letter-spacing: -0.2px;
+    color: var(--text);
   }
-  .sec{ margin-bottom: 18px; }
+  .sec{ margin-bottom: 22px; }
 
   .muted{ color: var(--muted); }
 
@@ -195,19 +220,22 @@
 
   .tag{
     display:inline-block;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-light);
     border-radius: 999px;
-    padding: 6px 10px;
-    margin: 7px 8px 0 0;
+    padding: 7px 14px;
+    margin: 6px 8px 0 0;
     font-size: 13px;
-    color: rgba(15,23,42,0.85);
-    background: rgba(255,255,255,0.72);
+    font-weight: 500;
+    color: rgba(15,23,42,0.9);
+    background: rgba(255,255,255,0.8);
     box-shadow: var(--shadow-sm);
-    transition: transform 140ms ease, background 140ms ease;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .tag:hover{
-    transform: translateY(-1px);
-    background: rgba(11,87,208,0.06);
+    transform: translateY(-2px);
+    background: rgba(11,87,208,0.08);
+    border-color: rgba(11,87,208,0.2);
+    box-shadow: 0 2px 8px rgba(11,87,208,0.12);
   }
 </style>
 
@@ -272,7 +300,7 @@
             I am a fourth-year Ph.D. candidate in Statistics at Purdue University, advised by
             <a href="https://feixue-stat.github.io/">Prof. Fei Xue</a> and
             <a href="https://www.stat.purdue.edu/~jianxi/">Prof. Jianxi Su</a>.
-            Prior to Purdue, I received my bachelor’s degree in Statistics from the School of Economics at Xiamen University in 2022, where I was advised by <a href="https://faculty.xmu.edu.cn/LJY/en/index.htm">Prof. Jingyuan Liu</a>.
+            Prior to Purdue, I received my bachelor's degree from the School of Economics at Xiamen University in 2022, where I was advised by <a href="https://faculty.xmu.edu.cn/LJY/en/index.htm">Prof. Jingyuan Liu</a>.
           </p>
 
           <p class="muted">
