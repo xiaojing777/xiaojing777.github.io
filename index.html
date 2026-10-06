@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Xiaojing Sun — Ph.D. candidate in Statistics at Purdue University. Research on wearable data, mobile health, and statistical machine learning." />
+  <meta name="description" content="Xiaojing Sun — Ph.D. candidate in Statistics at Purdue University. Research on uncertainty quantification, finite-sample guarantees, and reliable AI, with applications to health and insurance." />
   <title>Xiaojing Sun</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -537,7 +537,9 @@
           <h3>Focus</h3>
           <div class="tag">Uncertainty Quantification</div>
           <div class="tag">Statistical ML / Deep Learning</div>
-          <div class="tag">Auto-modeling</div>
+          <div class="tag">Finite-Sample Guarantees &amp; Risk Control</div>
+          <div class="tag">Reliable Self-Improving Agents</div>
+          <div class="tag">Anytime-Valid Inference</div>
           <div class="tag">Wearable device data &amp; Mobile Health</div>
           <div class="tag">Functional data analysis (FDA)</div>
           <div class="tag">Copulas &amp; Tail dependence</div>
@@ -558,9 +560,21 @@
           </p>
 
           <p class="muted">
-            My research centers on uncertainty quantification across tail risk modeling, heterogeneity analysis, and calibrated auto-modeling,
-            with applications to wearable device, insurance, and clinical trial data.
-            More recently, I have also been working on combining statistical thinking with AI.
+            My research focuses on <strong>uncertainty quantification, finite-sample guarantees, risk control, and interpretability</strong>.
+            I develop statistical methods for learning and decision-making from complex data, with applications to wearable health data,
+            tail-risk modeling in insurance, and clinical trials.
+          </p>
+
+          <p class="muted">
+            Recently, I have been bringing these ideas to <strong>reliable and safe AI</strong>, with a particular interest in
+            evaluating self-improving agents when benchmarks are repeatedly reused, anytime-valid inference for adaptive workflows,
+            and human–AI collaboration in statistical research. My latest work,
+            <a href="https://arxiv.org/abs/2609.33180">REUSE</a>, studies how to distinguish genuine improvements from adaptive overfitting
+            while controlling the risk of accepting ineffective changes.
+          </p>
+
+          <p class="muted">
+            My industry experience includes an internship at Novartis and research collaborations with Munich Re and Eli Lilly.
             If you are interested in potential collaboration, please feel free to reach out.
           </p>
         </div>
@@ -568,6 +582,7 @@
         <div class="card sec" id="news">
           <h2>News</h2>
           <ul>
+            <li><strong>2026/09</strong> — New preprint: <a href="https://arxiv.org/abs/2609.33180">Which Self-Improvements Should We Trust?</a> We introduce REUSE for risk-controlled evaluation of self-improving agents that reuse their benchmarks.</li>
             <li><strong>2026/06</strong> — Started an internship at a private fund startup in Shanghai as a Quant Researcher, working with <a href="https://www.linkedin.com/in/kun-lu-865904100">Kun Lu</a>.</li>
             <li><strong>2026/06</strong> — New preprint on statistical proof and human–AI collaboration posted on arXiv (<a href="https://arxiv.org/abs/2606.23666">arXiv:2606.23666</a>).</li>
             <li><strong>2025/08</strong> — Successfully completed my internship at Novartis (AMDS).</li>
@@ -585,7 +600,9 @@
               <strong>Biostatistician Intern, Novartis</strong> (East Hanover, NJ) — Jun–Aug 2025<br/>
               <span class="muted">
                 Advanced Methodology &amp; Data Science (AMDS). Mentors: Dr. Yao Chen (SM, AMDS) and Dr. Sophie Sun (AEA, AMDS).
-                Manager: Dr. David Ohlssen (AEA, AMDS).
+                Manager: Dr. David Ohlssen (AEA, AMDS).<br/>
+                Extended conditional inference trees to mixed-type multiple endpoints for prognostic and predictive variable selection,
+                with family-wise error control; applied the framework to a psoriasis clinical trial.
               </span>
             </li>
             <li>
@@ -609,6 +626,7 @@
           <h2>Talks / Presentations</h2>
           <ul>
             <li>Science VC of Novartis (East Hanover, NJ) — Internal Seminar (08/2025)</li>
+            <li>Actuarial Research Conference (Toronto, Canada) — Invited Talk (08/2025)</li>
             <li>ICSA 2025 (Storrs, CT) — Invited Talk (06/2025)</li>
             <li>JSM 2024 (Portland, OR) — Contributed Talk (08/2024)</li>
           </ul>
@@ -628,11 +646,19 @@
           <h2>AI Projects</h2>
           <ul>
             <li>
+              <strong>SkillForge-BE: An Agentic Harness for Adaptive Bioequivalence</strong> <span class="muted">(Ongoing)</span><br/>
+              <span class="muted">
+                With Yuhan Zeng and Xiao Wang, in collaboration with Eli Lilly. Developing an agentic AI framework for adaptive
+                bioequivalence analysis with a self-expanding skill library, validated statistical workflows, provenance tracing,
+                and anytime-valid inference constraints.
+              </span>
+            </li>
+            <li>
               <strong>Chat with GeoGebra</strong> <span class="muted">(Ongoing)</span><br/>
               <span class="muted">
                 Collaborating with <a href="https://ivory.cafe/">Ivory Zhang</a> on developing an AI agent using Next.js and AI SDK with function calling that autonomously orchestrates GeoGebra tools through multi-step reasoning to convert natural language into interactive geometric visualizations.
-                Beta version available at <a href="https://www.chat-with-geogebra.com/">chat-with-geogebra.com</a>.
-                Official launch coming soon.
+                Live demo: <a href="https://www.chat-with-geogebra.com/">chat-with-geogebra.com</a>.
+                Piloting in high schools in China to help teachers create dynamic, draggable visualizations for lesson preparation.
               </span>
             </li>
           </ul>
@@ -640,33 +666,64 @@
 
         <div class="card sec" id="research">
           <h2>Research</h2>
-          <h3 style="margin:0 0 6px; font-size:0.95rem; font-family: 'DM Sans', sans-serif; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint);">Preprint</h3>
+          <h3 style="margin:0 0 6px; font-size:0.95rem; font-family: 'DM Sans', sans-serif; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint);">Preprints</h3>
           <ul>
+            <li>
+              <strong>Which Self-Improvements Should We Trust? Reliable Self-Improvement When Agents Reuse Their Benchmarks</strong><br/>
+              <span class="muted">
+                Xiaojing Sun, Yuhan Zeng, Zihua She, Xiao Wang. (2026)<br/>
+                <a href="https://arxiv.org/abs/2609.33180">arXiv:2609.33180</a> · Under review.<br/>
+                We propose REUSE (Risk-controlled Evaluation Under Sequential Evolution) to evaluate adaptive agent updates using
+                a fixed benchmark. Under the framework's assumptions, with probability at least 1 − α, every accepted update
+                improves performance on the underlying task distribution. In live self-improvement experiments, REUSE reduced
+                false promotions from up to 20.7% to 0% while maintaining competitive final performance.
+              </span>
+            </li>
             <li>
               Generalized Heterogeneous Functional Model with Applications to Large-scale Mobile Health Data<br/>
               <span class="muted">
                 Xiaojing Sun, Bingxin Zhao, Fei Xue.
                 <a href="https://arxiv.org/abs/2501.01135">arXiv:2501.01135</a>;
-                <a href="https://arxiv.org/abs/2601.10994">arXiv:2601.10994</a>
+                <a href="https://arxiv.org/abs/2601.10994">arXiv:2601.10994</a> · Under revision at JASA (Theory and Methods).<br/>
+                Jointly estimates personalized functional effects and identifies subgroups linking wearable-measured physical activity
+                to health outcomes, with scalable pre-clustering and a heterogeneity test; applied to dementia risk in UK Biobank.
               </span>
             </li>
             <li>
               Statistical Proof as a Window into Human-AI Collaboration: Practical Insights and a Community Agenda<br/>
               <span class="muted">
                 Xiaojing Sun, Huayu Tang, Buxin Su, Mateo Matijasevick, Chong Wu, Fei Xue, Bingxin Zhao.
-                <a href="https://arxiv.org/abs/2606.23666">arXiv:2606.23666</a>
+                <a href="https://arxiv.org/abs/2606.23666">arXiv:2606.23666</a><br/>
+                Studies research-level statistical proofs to understand where AI assistance succeeds, where strategy selection
+                still requires human expertise, and how to structure effective human–AI research workflows.
               </span>
             </li>
           </ul>
 
           <h3 style="margin:14px 0 6px; font-size:0.95rem; font-family: 'DM Sans', sans-serif; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; color:var(--faint);">Selected Projects</h3>
           <ul>
-            <li>Flexible non-exchangeable bivariate copulas for mono-vine structures: Construction, angular tail dependence, and applications.</li>
-            <li>AI-empowered representation learning for mobile health data — ongoing collaboration with Munich Re on leveraging wearable data in accelerated life insurance underwriting.</li>
             <li>
-              TabCAM: Online Calibrated Regularization for Tabular Deep Learning<br/>
+              Flexible Non-exchangeable Bivariate Copulas for Mono-vine Structures: Construction, Angular Tail Dependence, and Applications<br/>
               <span class="muted">
-                A model-agnostic add-on framework that improves any base architecture in overparameterized deep learning by jointly estimating model parameters and per-parameter regularization strengths at almost no extra computational cost and give built-in covariate-conditional uncertainty quantification.
+                Xiaojing Sun, Lei Hua, Jianxi Su, Zhongyi Yuan. (2025) · Under review.<br/>
+                A Pareto-mixture copula for flexible tail dependence, tail asymmetry, and non-exchangeability, extended to mono-vine
+                structures and Bayesian inference with discrete margins.
+              </span>
+            </li>
+            <li>
+              An AI-Empowered Unified Framework for Leveraging Wearable Data in Accelerated Underwriting<br/>
+              <span class="muted">
+                Xiaojing Sun, Angela Gong, Jianxi Su, Xiao Wang, Fei Xue. Ongoing collaboration with Munich Re.<br/>
+                Integrates high-frequency wearable signals into mortality models and quantifies mortality slippage relative to full
+                underwriting to inform accelerated life insurance underwriting.
+              </span>
+            </li>
+            <li>
+              TabCAM: Online Calibrated Regularization for Deep Learning<br/>
+              <span class="muted">
+                Xiaojing Sun, Jianxi Su, Xiao Wang. (2026) · Under review.<br/>
+                A model-agnostic framework that jointly learns model parameters and per-parameter regularization through online
+                calibration, with built-in conditional uncertainty quantification at near-zero additional training cost.
               </span>
             </li>
           </ul>
@@ -683,7 +740,7 @@
             West Lafayette, IN 47907
           </p>
 
-          <p class="small">Last updated: <span id="d"></span></p>
+          <p class="small">Last updated: <time datetime="2026-10-06">October 6, 2026</time></p>
         </div>
 
         <p class="footer-note">Hosted on GitHub Pages</p>
@@ -693,13 +750,6 @@
 
   <script>
     (function () {
-      const now = new Date();
-      const el = document.getElementById("d");
-      if (el) {
-        el.textContent =
-          now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
-      }
-
       var drawer = document.getElementById("drawer");
       var menuBtn = document.getElementById("menuBtn");
       var drawerClose = document.getElementById("drawerClose");
